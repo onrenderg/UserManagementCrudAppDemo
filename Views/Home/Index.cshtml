@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<!-- “Declare the HTML document type to use HTML5.” -->
+
+<html>
+<!-- “Start the HTML document.” -->
+
+<head>
+    <!-- “Begin the document head – contains metadata and stylesheets.” -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- “Import Bootstrap CSS from CDN for layout and styling support.” -->
+
+    <style>
+        .custom-font {
+            font-family: 'Roboto Slab', serif;
+        }
+    </style>
+    <!-- “Define a custom CSS class to apply a serif font.” -->
+
+</head>
+<!-- “End of the head section.” -->
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- “Start the body of the document with Bootstrap classes to make it a vertically full-height flex layout.” -->
+
+    <header class="container mb-5 mt-5">
+        <!-- “Header section with top and bottom margin.” -->
+
+        <h1 class="text-center text-primary display-4 custom-font">UserManagementCrudApp</h1>
+        <!-- “Main heading for the page, centered and styled with Bootstrap and custom font.” -->
+
+    </header>
+
+    <hr class="border border-3 border-dark">
+    <!-- “Thick horizontal line to separate the header from the content.” -->
+
+    <main class="container flex-grow-1 d-flex align-items-center py-5">
+        <!-- “Main content area that stretches to fill available space, vertically centered with padding.” -->
+
+        <nav class="row justify-content-center w-100">
+            <!-- “Navigation row centered horizontally, spans full width.” -->
+
+            <div class="col-3 d-grid">
+                <a href="/home/create" class="btn btn-primary">Create View</a>
+            </div>
+            <!-- “Button that links to the Create page.” -->
+
+            <div class="col-3 d-grid">
+                <a href="/home/read" class="btn btn-primary">Read View</a>
+            </div>
+            <!-- “Button that links to the Read page.” -->
+
+            <div class="col-3 d-grid">
+                <a href="/home/update" class="btn btn-primary">Update View</a>
+            </div>
+            <!-- “Button that links to the Update page.” -->
+
+            <div class="col-3 d-grid">
+                <a href="/home/delete" class="btn btn-primary">Delete View</a>
+            </div>
+            <!-- “Button that links to the Delete page.” -->
+
+        </nav>
+
+    </main>
+
+    <hr class="border border-3 border-dark">
+    <!-- “Another separator line for visual symmetry.” -->
+
+    <footer class="container mt-auto mb-5">
+        <!-- “Footer fixed at the bottom with margin and centered content.” -->
+
+        <small class="d-block text-center text-primary">&copy; 2025 UserManagementCrudApp </small>
+        <!-- “Footer text with copyright.” -->
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- “Import Bootstrap JavaScript functionality (dropdowns, modals, etc.).” -->
+
+</body>
+<!-- “End of the body.” -->
+
+</html>
+<!-- “End of the HTML document.” -->

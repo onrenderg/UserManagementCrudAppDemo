@@ -1,0 +1,99 @@
+﻿@model UserManagementCrudAppDemo.Models.User
+// “Bind this view to a single User model instance so we can access @Model.Name, etc.”
+
+<!DOCTYPE html>
+// “Declare the HTML5 document type.”
+
+<html>
+// “Start the HTML document.”
+
+<head>
+    // “Start of the head section for styles and metadata.”
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    // “Include Bootstrap CSS for responsive layout and components.”
+
+    <style>
+        .custom-font {
+            font-family: 'Roboto Slab', serif;
+        }
+    </style>
+    // “Add a custom font styling class for headings.”
+
+</head>
+// “Close the head section.”
+
+<body class="d-flex flex-column min-vh-100">
+    // “Use vertical flex layout to fill the full height and make footer stick to the bottom.”
+
+    <div class="container mb-5 mt-5">
+        <h1 class="text-center text-primary display-4 custom-font">Create View</h1>
+    </div>
+    // “Main heading for the Create page with top/bottom spacing and styled font.”
+
+    <nav class="container">
+        <div class="row justify-content-center w-100">
+            <div class="col-3 d-grid">
+                <a href="/home/create" class="btn btn-primary">Create View</a>
+            </div>
+            <div class="col-3 d-grid">
+                <a href="/home/read" class="btn btn-primary">Read View</a>
+            </div>
+            <div class="col-3 d-grid">
+                <a href="home/update" class="btn btn-primary">Update View</a>
+            </div>
+            <div class="col-3 d-grid">
+                <a href="/home/delete" class="btn btn-primary">Delete View</a>
+            </div>
+        </div>
+    </nav>
+    // “Navigation buttons to switch between all CRUD operations.”
+
+    <div class="container flex-grow-1 py-5">
+        <h2 class="mb-4">Create User</h2>
+        // “Subheading for the form section.”
+
+        @using (Html.BeginForm())
+        // “Begin a form that posts to the current controller/action by default.”
+
+        {
+            @Html.AntiForgeryToken()
+            // “Add an anti-forgery token for form security.”
+
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+            // “Labeled input for the user’s name.”
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+            // “Labeled input for the user’s email address.”
+
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            </div>
+            // “Labeled input for the user’s phone number.”
+
+            <button type="submit" class="btn btn-success">Create</button>
+            // “Form submit button to create the user.”
+        }
+    </div>
+    // “End of the form container.”
+
+    <footer class="container mt-auto mb-5">
+        <small class="d-block text-center text-primary">&copy; 2025 UserManagementCrudApp</small>
+    </footer>
+    // “Footer with app name and copyright.”
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    // “Include Bootstrap’s JS bundle for UI functionality.”
+
+</body>
+// “End of the body.”
+
+</html>
+// “End of the HTML document.”
